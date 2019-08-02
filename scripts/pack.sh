@@ -1,3 +1,3 @@
 rm functions/renderer.tgz
-yarn build
+npm run build
 mv "$(npm pack)" functions/renderer.tgz

@@ -44,12 +44,21 @@ Created alias default for myapp.
 Now using alias default (myapp)
 ```
 
+You'll also need to install the functions dependencies:
+
+```bash
+cd functions
+npm install
+cd ..
+```
+
 
 ### 3. Deploy!
 
 Deploying your app to the internets is simple:
 
 ```bash
+# This can take quite a bit of time
 npm run deploy
 ```
 
