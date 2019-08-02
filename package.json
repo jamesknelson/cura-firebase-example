@@ -1,0 +1,62 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "navi": "^0.13.3",
+    "npm-run-all": "^4.1.5",
+    "polished": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-navi": "^0.13.5",
+    "react-navi-helmet-async": "^0.13.5",
+    "rimraf": "^2.6.3",
+    "styled-components": "^4.3.2",
+    "universal-react-scripts": "3.0.3"
+  },
+  "main": "build/node/index.js",
+  "files": [
+    "build/node/*.*"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "firebase deploy",
+    "predeploy": "sh ./scripts/pack.sh",
+    "serve": "react-scripts serve",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "no-restricted-imports": [
+        "error",
+        {
+          "paths": [
+            {
+              "name": "styled-components",
+              "message": "Please import from styled-components/macro."
+            }
+          ],
+          "patterns": [
+            "!styled-components/macro"
+          ]
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
